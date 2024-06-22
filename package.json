@@ -1,4 +1,11 @@
 {
+  "name": "your-app",
+  "version": "1.0.0",
+  "description": "Your application description",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
@@ -6,3 +13,4 @@
     "nodemailer": "^6.9.14"
   }
 }
+
