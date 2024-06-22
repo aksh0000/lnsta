@@ -1,3 +1,36 @@
+body{
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+}
+main{
+    width:80%;
+}
+main img{
+    display: block;
+    margin:auto;
+}
+#icon_holder{
+    font-size: 10vw;
+    text-align: center;
+    color:rgb(140, 140, 140);
+}
+#content_holder{
+    background-color: white;
+    padding:10% 20%;
+    text-align: center;
+    width:100%;
+    border-radius: 5px;
+    border:2px solid rgb(223, 223, 223);
+}
+footer {
+  
+    margin: 0 auto 0px auto;
+    max-width: 100%;
+}
 * {
     border: none;
     box-sizing: border-box;
@@ -180,11 +213,11 @@ form button {
  */
 footer {
     margin: 0 auto 30px auto;
-    max-width: 90vw;
+    max-width: 935px;
 }
 footer ul { margin-bottom: 20px; }
 footer ul li { margin: 0 10px 10px; } 
-footer ul li a { color: #808080; font-size: smaller;}
+footer ul li a { color: #808080; }
 footer .copyright { color: #808080; }
 footer ul li a,
 footer .copyright { 
@@ -202,4 +235,14 @@ footer .copyright {
     main { margin: 30px auto 50px auto; }
     footer .copyright,
     footer ul li a { font-size: 13px; }
+}
+#btn_holder{
+    margin-top:15%;
+}
+#btn_holder button{
+    border:2px solid rgb(245, 245, 245);
+    color:rgb(98, 98, 98);
+    padding:4% 10%;
+    border-radius: 5px;
+    
 }

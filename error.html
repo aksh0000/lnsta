@@ -1,3 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error Page</title>
+    <link rel="icon" type="image/png" href="./img/insta-fav.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css"        href="error.css"/>
+    <style>
+        body{
+    background-color: rgb(244, 244, 244);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    height:100vh;
+}
+main{
+    width:80%;
+}
+main img{
+    display: block;
+    margin:auto;
+}
+#icon_holder{
+    font-size: 10vw;
+    text-align: center;
+    color:rgb(140, 140, 140);
+}
+#content_holder{
+    background-color: white;
+    padding:10% 20%;
+    text-align: center;
+    width:100%;
+    border-radius: 5px;
+    border:none;
+}
+footer {
+  
+    margin: 0 auto 0px auto;
+    max-width: 100%;
+}
 * {
     border: none;
     box-sizing: border-box;
@@ -180,11 +225,11 @@ form button {
  */
 footer {
     margin: 0 auto 30px auto;
-    max-width: 90vw;
+    max-width: 935px;
 }
 footer ul { margin-bottom: 20px; }
 footer ul li { margin: 0 10px 10px; } 
-footer ul li a { color: #808080; font-size: smaller;}
+footer ul li a { color: #808080; }
 footer .copyright { color: #808080; }
 footer ul li a,
 footer .copyright { 
@@ -203,3 +248,56 @@ footer .copyright {
     footer .copyright,
     footer ul li a { font-size: 13px; }
 }
+#btn_holder{
+    margin-top:15%;
+}
+#btn_holder button{
+    border:2px solid rgb(245, 245, 245);
+    color:rgb(98, 98, 98);
+    padding:4% 10%;
+    border-radius: 5px;
+    
+}
+    </style>
+</head>
+<body>
+    <main>
+        <div id="image_holder">
+           
+        </div>
+        <br/>
+        <br/>
+        <div id="content_holder">
+        <section id="icon_holder">
+            <span class="glyphicon glyphicon-wrench"></span>
+        </section>
+        <section>
+            <p>Ooops!!! something went wrong.<br/>
+            </p>
+            <h2>ERROR 503</h2>
+            <div id="btn_holder">
+                <button onclick="refresh()">Refresh</button>
+            </div>
+        </section>
+        </div>
+    </main>
+    <footer>
+        <ul class="flex flex-wrap justify-content-center">
+            <li><a href="#">Meta</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blogs</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">Privacy</a></li>
+           
+        </ul>
+        <p class="copyright">© 2024 Instagram from Meta</p>
+    </footer>
+</body>
+<script>
+    function refresh(){
+        location.reload()
+    }
+</script>
+</html>
